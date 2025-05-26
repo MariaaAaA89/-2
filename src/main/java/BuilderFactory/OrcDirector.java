@@ -9,25 +9,25 @@ public class OrcDirector {
         this.builderFactory = builderFactory;
     }
 
-    public Ork createBasicOrk(String name) {
+    public Ork createBasicOrk() {
         OrkBuilder builder = builderFactory.createOrkBuilder()
-                .setName(name)
+                .setName()
                 .generateAttributes();
         return builder.build();
     }
 
-    public Ork createLeaderOrk(String name) {
+    public Ork createLeaderOrk() {
         OrkBuilder builder = builderFactory.createOrkBuilder()
-                .setName(name)
+                .setName()
                 .generateAttributes();
 
         builder.banner = builder.banner + " + Горн";
         return builder.build();
     }
 
-    public Ork createScoutOrk(String name) {
+    public Ork createScoutOrk() {
         OrkBuilder builder = builderFactory.createOrkBuilder()
-                .setName(name)
+                .setName()
                 .generateAttributes();
 
         builder.weapon = "Лук";

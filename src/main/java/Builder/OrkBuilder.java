@@ -16,8 +16,8 @@ public abstract class OrkBuilder {
     protected Faker faker = new Faker();
     protected Random rand = new Random();
 
-    public OrkBuilder setName(String name) {
-        this.name = name != null ? name : faker.lordOfTheRings().character();
+    public OrkBuilder setName() {
+        this.name = faker.lordOfTheRings().character();
         return this;
     }
 

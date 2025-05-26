@@ -81,9 +81,9 @@ public class OrcArmyApp extends JFrame {
 
         OrcDirector director = new OrcDirector(factory);
         Ork ork = switch (role) {
-            case "Командир" -> director.createLeaderOrk(null);
-            case "Разведчик" -> director.createScoutOrk(null);
-            default -> director.createBasicOrk(null);
+            case "Командир" -> director.createLeaderOrk();
+            case "Разведчик" -> director.createScoutOrk();
+            default -> director.createBasicOrk();
         };
 
         addOrkToTree(tribe, ork);
